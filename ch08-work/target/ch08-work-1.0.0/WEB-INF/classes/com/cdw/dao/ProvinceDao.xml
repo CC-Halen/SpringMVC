@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdw.dao.ProvinceDao">
+
+    <select id="selectProvinceList" resultType="com.cdw.domain.Province">
+        select *
+        from province
+    </select>
+
+</mapper>

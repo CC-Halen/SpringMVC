@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch01-springmvc" />
+        <module name="ch04-SSM" />
+        <module name="ch01-requestmapping" />
+        <module name="ch03-url-pattern" />
+        <module name="ch05-forward-redirect" />
+        <module name="ch06-exception-handler" />
+        <module name="ch07-interceptor" />
+        <module name="ch08-work" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch01-requestmapping" target="1.8" />
+      <module name="ch01-springmvc" target="1.8" />
+      <module name="ch03-url-pattern" target="1.8" />
+      <module name="ch04-SSM" target="1.8" />
+      <module name="ch05-forward-redirect" target="1.8" />
+      <module name="ch06-exception-handler" target="1.8" />
+      <module name="ch07-interceptor" target="1.8" />
+      <module name="ch08-work" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

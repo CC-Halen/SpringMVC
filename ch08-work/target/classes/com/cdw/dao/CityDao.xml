@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdw.dao.CityDao">
+
+    <insert id="insertCity">
+        insert into city(name, provinceId) VALUES (#{name},#{provinceId})
+    </insert>
+
+    <select id="selectCityByProvinceId" resultType="com.cdw.domain.City">
+        select * from city where provinceId = #{provinceId}
+    </select>
+
+</mapper>

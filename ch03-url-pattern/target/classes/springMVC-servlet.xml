@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--声明组件扫描器-->
+    <context:component-scan base-package="com.cdw.controller"/>
+
+    <!--配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--声明注解驱动，创建HttpMessageConverter接口的7个实现类对象-->
+    <!--default-servlet-handler 与 RequestMapping有冲突，使用注册驱动解决问题-->
+    <mvc:annotation-driven/>
+
+    <!--声明处理静态资源的第一种处理方式：
+        创建DefaultServletHttpRequestHandler处理静态资源。
+        DefaultServletHttpRequestHandler把接收静态资源的地址转发给tomcat的default-->
+    <!--    <mvc:default-servlet-handler/>-->
+
+
+    <!--声明处理静态资源的第二种处理方式-->
+    <!--    <mvc:resources mapping="/images/**" location="/images/"/>-->
+    <!--    <mvc:resources mapping="/html/**" location="/html/"/>-->
+    <!--    <mvc:resources mapping="/js/**" location="/js/"/>-->
+    <mvc:resources mapping="/static/**" location="/static/"/>
+
+</beans>
